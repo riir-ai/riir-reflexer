@@ -44,7 +44,7 @@ improvement loop — ever, in this repo.
 | The improvement loop and artifact minting | riir-train (private) |
 | Hosted serving (metered/keyed/settled), settlement, contribution economics | riir-dapps (private) — this repo's free stateless demo Worker is not that |
 | Deploy orchestration | riir-deployer (private) |
-| The arena site / serving product | riir-reflex (site repo `gist-rs/reflex-site`) — this engine's wasm boards run there |
+| The arena site / serving product | riir-reflex (site repo `riir-ai/reflex-site`) — this engine's wasm boards run there |
 | Public substrate (board sim, lookahead, rulebook evaluator, reference genome) | the katgpt-rs Issue-893 module (`katgpt-tetris`) — consumed, never duplicated |
 | VSL1/ARTB asset vessels | riir-neuron-db — a deliberate artifact-class split, recorded both sides; this repo's vessel format is its own public crate |
 
