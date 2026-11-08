@@ -41,7 +41,7 @@ if [ -n "$SITE" ]; then
   [ -d "$SITE/assets" ] || { echo "build.sh: --site $SITE has no assets/" >&2; exit 1; }
   cp "$HERE/reflexer.wasm" "$SITE/assets/reflexer.wasm"
   cp "$HERE/reflexer_host.mjs" "$SITE/assets/reflexer_host.js"
-  printf '{"source":"gist-rs/riir-reflexer crates/reflexer-wasm + cloudflare/reflexer-worker/reflexer_host.mjs","git":"%s","wasm_sha256":"%s","host_sha256":"%s"}\n' \
+  printf '{"source":"riir-ai/riir-reflexer crates/reflexer-wasm + cloudflare/reflexer-worker/reflexer_host.mjs","git":"%s","wasm_sha256":"%s","host_sha256":"%s"}\n' \
     "$GIT" "$SHA" "$(shasum -a 256 "$HERE/reflexer_host.mjs" | cut -d' ' -f1)" >"$SITE/assets/reflexer.mirror.json"
   echo "mirrored → $SITE/assets/{reflexer.wasm,reflexer_host.js,reflexer.mirror.json}"
 fi
