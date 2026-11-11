@@ -9,11 +9,11 @@
 //!
 //! Persistence shape: one JSON object, written atomically (tmp + rename,
 //! 0600) after a fully successful apply —
-//! `{"key_id":1,"artifact_version":3,"commitment":"<64hex>"}`.
-//! A CORRUPT state file refuses LOUDLY (exit 1): reading it as genesis
-//! would re-open the rollback hole the floor exists to close. The
-//! operator's remedy is to inspect and deliberately delete the file,
-//! never to have the host silently forget.
+//!       `{"key_id":1,"artifact_version":3,"commitment":"<64hex>"}`.
+//!       A CORRUPT state file refuses LOUDLY (exit 1): reading it as genesis
+//!       would re-open the rollback hole the floor exists to close. The
+//!       operator's remedy is to inspect and deliberately delete the file,
+//!       never to have the host silently forget.
 
 use std::io::Write;
 use std::path::Path;
